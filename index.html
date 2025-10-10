@@ -6,6 +6,7 @@
     <title>index</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css">
+    <span style="letter-spacing:-0.5px">
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -71,22 +72,22 @@
     // Lucide 아이콘 정의
     const Lucide = window.LucideReact || {};
     
-    const LogOut = Lucide.LogOut || '🚪'; 
-    const MessageSquare = Lucide.MessageSquare || '💬'; 
+    const LogOut = Lucide.LogOut || '⌧'; 
+    const MessageSquare = Lucide.MessageSquare || '✉︀'; 
     const Loader = Lucide.Loader || '↻'; 
-    const AlertTriangle = Lucide.AlertTriangle || '⚠️';
+    const AlertTriangle = Lucide.AlertTriangle || '⚠︎';
     const ChevronDown = Lucide.ChevronDown || '▼';
     const ChevronUp = Lucide.ChevronUp || '▲';
-    const Home = Lucide.Home || '🏠';
-    const Heart = Lucide.Heart || '❤️';
+    const Home = Lucide.Home || '𐦂';
+    const Heart = Lucide.Heart || '❤︎';
     const Bookmark = Lucide.Bookmark || '☆';
     const RepeatIcon = Lucide.Repeat2 || '⇆';
-    const Image = Lucide.Image || '🖼️';
-    const X = Lucide.X || '❌';
+    const Image = Lucide.Image || '☠';
+    const X = Lucide.X || '✂';
     const ArrowLeft = Lucide.ArrowLeft || '←';
-    const Bell = Lucide.Bell || '🔔';
-    const Sun = Lucide.Sun || '☼';
-    const Moon = Lucide.Moon || '☽';
+    const Bell = Lucide.Bell || 'ᯤ';
+    const Sun = Lucide.Sun || '×͜×';
+    const Moon = Lucide.Moon || '☻';
 
 //여기를 수정하세요
     const hardcodedFirebaseConfig = {
@@ -133,16 +134,16 @@ const MOCK_GROUPS = [
 ];
 
 const MOCK_USERS = [
-    { uid: 'user-001', name: '유저 1', handle: 'user1', color: 'bg-gray-500', profile: '1', group: 'group1' },
-    { uid: 'user-002', name: '유저 2', handle: 'user2', color: 'bg-gray-500', profile: '2', group: 'group1' },
-    { uid: 'user-003', name: '유저 3', handle: 'user3', color: 'bg-gray-500', profile: '3', group: 'group2' },
-    { uid: 'user-004', name: '유저 4', handle: 'user4', color: 'bg-gray-500', profile: '4', group: 'group2' },
-    { uid: 'user-005', name: '유저 5', handle: 'user5', color: 'bg-gray-500', profile: '5', group: 'group3' },
-    { uid: 'user-006', name: '유저 6', handle: 'user6', color: 'bg-gray-500', profile: '6', group: 'group3' },
-    { uid: 'user-007', name: '유저 7', handle: 'user7', color: 'bg-gray-500', profile: '7', group: 'group4' },
-    { uid: 'user-008', name: '유저 8', handle: 'user8', color: 'bg-gray-500', profile: '8', group: 'group4' },
-    { uid: 'user-009', name: '유저 9', handle: 'user9', color: 'bg-gray-500', profile: '9', group: 'group5' },
-    { uid: 'user-010', name: '유저 10', handle: 'user10', color: 'bg-gray-500', profile: '10', group: 'group5' },
+    { uid: 'user-001', name: 'ㅤ', handle: 'devamara', color: 'bg-gray-500', profile: '1', group: 'group1' },
+    { uid: 'user-002', name: 'ㅤ', handle: 'deadspot', color: 'bg-gray-500', profile: '2', group: 'group1' },
+    { uid: 'user-003', name: 'ㅤ', handle: 'shutdown', color: 'bg-gray-500', profile: '3', group: 'group2' },
+    { uid: 'user-004', name: 'ㅤ', handle: 'exit_floor', color: 'bg-gray-500', profile: '4', group: 'group2' },
+    { uid: 'user-005', name: 'ㅤ', handle: 'inquisitor', color: 'bg-gray-500', profile: '5', group: 'group3' },
+    { uid: 'user-006', name: 'ㅤ', handle: 'catastrophe', color: 'bg-gray-500', profile: '6', group: 'group3' },
+    { uid: 'user-007', name: 'ㅤ', handle: 'but_not_today', color: 'bg-gray-500', profile: '7', group: 'group4' },
+    { uid: 'user-008', name: 'ㅤ', handle: 'quit_and_quiet', color: 'bg-gray-500', profile: '8', group: 'group4' },
+    { uid: 'user-009', name: 'ㅤ', handle: 'phenomenon', color: 'bg-gray-500', profile: '9', group: 'group5' },
+    { uid: 'user-010', name: 'ㅤ', handle: 'mashmellow', color: 'bg-gray-500', profile: '10', group: 'group5' },
 ];
     
     const EXAMPLE_IMAGE_URL = 'https://i.imgur.com/KDTgHmT.png';
@@ -411,7 +412,7 @@ const MOCK_USERS = [
         }, []);
         
         const formProfile = currentUserProfile || { 
-            profile: '👤', 
+            profile: 'ㅤ', 
             color: 'bg-gray-500', 
             handle: '사용자',
             profileImageUrl: '' 
@@ -1107,7 +1108,7 @@ const MOCK_USERS = [
                                         disabled={!App.currentUserId}
                                     >
                                         {typeof Heart === 'string'
-                                            ? <span>{isLiked ? '❤️' : '🤍'}</span>
+                                            ? <span>{isLiked ? '♥︎' : '♡'}</span>
                                             : <Heart size={isMainFocus ? 20 : 16} fill={isLiked ? 'currentColor' : 'none'} className={isLiked ? 'text-red-500' : ''} />
                                         }
                                         <span>{sourcePostForReactions.likes?.length > 0 ? sourcePostForReactions.likes.length : ''}</span>
@@ -1151,7 +1152,7 @@ const MOCK_USERS = [
         }, [replyContent]);
         
         const formProfile = currentUserProfile || { 
-            profile: '👤', 
+            profile: 'ㅤ', 
             color: 'bg-gray-500', 
             handle: '사용자',
             profileImageUrl: '' 
@@ -1646,7 +1647,7 @@ const App = () => {
             if (content.trim() === "" && !retweetedPostId && !imageUrl) return;
 
             const postingProfile = currentUserProfile || { 
-                uid: currentUserId, name: "Anonymous User", handle: "anonymous", color: "bg-gray-500", profile: "👤", profileImageUrl: '' 
+                uid: currentUserId, name: "Anonymous User", handle: "anonymous", color: "bg-black-500", profile: "ㅤ", profileImageUrl: '' 
             };
             
             const mentionRegex = /@([a-zA-Z0-9_]+)/g;
@@ -1951,7 +1952,7 @@ const App = () => {
             setSelectedPostIdForThread(null);
         };
         
-        const currentProfileDisplay = currentUserProfile || { name: '로그아웃됨', handle: 'guest', profile: '?', color: 'bg-gray-500', profileImageUrl: '' };
+        const currentProfileDisplay = currentUserProfile || { name: '로그아웃됨', handle: 'guest', profile: 'ㅤ', color: 'bg-gray-500', profileImageUrl: '' };
         
         const allPostProps = {
             onThreadSelect: handleThreadSelect, 
