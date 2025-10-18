@@ -12,7 +12,8 @@
     body {
       margin: 0;
       height: 100vh;
-      background-size: cover;
+      min-height: 100vh; /* 최소 높이 보장 */
+      background-size: cover; /* 화면 크기에 맞춰 배경 자동 확대/축소 */
       background-position: center;
       transition: background-image 1s ease;
       font-family: "KoPub Dotum", sans-serif;
@@ -23,7 +24,7 @@
     }
 
     #message {
-      font-size: 1.0rem;
+      font-size: 1.5rem;
       text-align: center;
       width: 80%; /* 화면 가로의 60% */
       max-width: 900px; /* 최대 폭 제한 */
