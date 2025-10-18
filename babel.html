@@ -11,7 +11,7 @@
   <style>
     body {
       margin: 0;
-      height: 30vh;
+      height: 100vh;
       background-size: cover;
       background-position: center;
       transition: background-image 1s ease;
@@ -38,9 +38,10 @@
 
     #actionButton {
       position: absolute;
+      top: 50%;       /* 화면 세로 중앙 */
+      left: 50%;      /* 화면 가로 중앙 */
+      transform: translate(-50%, -50%); /* 버튼 크기를 고려해 정확히 중앙 배치 */
       bottom: 100px;      /* 화면 아래에서 100px 위 */
-      left: 50%;           /* 가로 중앙 */
-      transform: translateX(-50%);
       background: none;
       border: none;
       cursor: pointer;
