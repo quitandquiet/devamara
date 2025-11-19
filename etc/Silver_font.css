@@ -5,6 +5,6 @@
   font-weight: 400;
   font-display: swap;
   src: local('Silver'),
-       url('https://quitandquiet.github.io/devamara/etc/Silver.woff') format('woff'),
-       url('https://quitandquiet.github.io/devamara/etc/Silver.ttf') format('truetype');
+       url('./Silver.woff') format('woff'),
+       url('./Silver.ttf') format('truetype');
 }
