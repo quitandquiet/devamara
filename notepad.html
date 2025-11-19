@@ -224,6 +224,11 @@ function applyFont(name){
   // 에디터와 전체 notepad에 폰트 적용 (브라우저가 해당 폰트를 못불러오면 대체 폰트로 보임)
   editor.style.fontFamily = `"${name}", 'Galmuri9','Galmuri11', sans-serif`;
   document.documentElement.style.fontFamily = `"${name}", 'Galmuri9','Galmuri11', sans-serif`;
+     if (name === "Silver") {
+    editor.style.fontSize = "25px";
+  } else {
+    editor.style.fontSize = "15px";
+     }
   localStorage.setItem(FONT_KEY, name);
 }
 applyFont(savedFont);
