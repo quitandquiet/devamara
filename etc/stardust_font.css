@@ -1,0 +1,10 @@
+@font-face {
+  font-family: PF Stardust 3.0;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('PF Stardust'),
+       url('https://quitandquiet.github.io/devamara/etc/PFstardust3.0.woff2') format('woff2'),
+       url('https://quitandquiet.github.io/devamara/etc/PFstardust3.0.ttf') format('truetype');
+}
