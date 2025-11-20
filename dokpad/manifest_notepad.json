@@ -2,7 +2,7 @@
   "name": "Dokpad",
   "short_name": "Dokpad",
   "description": "없어요 아뇨 없어요 없었어요 없어요 그냥!",
-  "start_url": "https://quitandquiet.github.io/devamara/notepad/mine.html",
+  "start_url": "https://quitandquiet.github.io/devamara/dokpad/mine.html",
   "scope": ".",
   "display": "fullscreen",
   "theme_color": "#ececec",
