@@ -178,6 +178,30 @@ html,body{ height:100%; margin:0; background:var(--win-bg);
 </div>
 
 <script>
+ 
+<!-- SW -->
+ 
+       const registerServiceWorker = async () => {
+        if ("serviceWorker" in navigator) {
+          try {
+            const registration = await navigator.serviceWorker.register("./service-worker.js");
+            if (registration.installing) {
+              console.log("Service worker installing");
+            } else if (registration.waiting) {
+              console.log("Service worker installed");
+            } else if (registration.active) {
+              console.log("Service worker active");
+            }
+          } catch (error) {
+            console.error(`Registration failed with ${error}`);
+          }
+        }
+      };
+
+      registerServiceWorker();
+ 
+ <!-- SW end -->
+ 
 /* 간단 주석: 
  - 메뉴(.menu-item) 클릭 -> 내부 .dropdown 보이기
  - format > 글꼴은 내부 .font-sub (오른쪽으로 열림)
